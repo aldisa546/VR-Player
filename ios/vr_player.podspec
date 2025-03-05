@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
   s.dependency 'Flutter'
   # s.dependency 'PlayKitVR', '~> 1.3.0'
-  s.dependency 'PlayKitVR', '~> 1.3.0', :git => 'https://github.com/aldisa546/playkit-ios-vr.git'
+  s.dependency 'PlayKitVR'
   s.dependency 'PlayKitProviders'
 
 end
