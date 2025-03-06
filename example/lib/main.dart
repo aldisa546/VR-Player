@@ -39,24 +39,72 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: buttonOnPressed,
-      child: const Text('Start Video'),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        ElevatedButton(
+          onPressed: () => _navigateToVideo(
+              'https://kaaba.co.id/syaamil-demo/encoded/arafah/master.m3u8'),
+          child: const Text('Arafah Video'),
+        ),
+        ElevatedButton(
+          onPressed: () => _navigateToVideo(
+              'https://kaaba.co.id/syaamil-demo/encoded/tahalul/master.m3u8'),
+          child: const Text('Tahalul Video'),
+        ),
+        ElevatedButton(
+          onPressed: () => _navigateToVideo(
+              'https://kaaba.co.id/syaamil-demo/encoded/tawaf/master.m3u8'),
+          child: const Text('Tawaf Video'),
+        ),
+        ElevatedButton(
+          onPressed: () => _navigateToVideo(
+              'https://kaaba.co.id/syaamil-demo/encoded/sai/master.m3u8'),
+          child: const Text('Sai Video'),
+        ),
+        ElevatedButton(
+          onPressed: () => _navigateToVideo(
+              'https://kaaba.co.id/syaamil-demo/encoded/mas-a/master.m3u8'),
+          child: const Text('Mas A Video'),
+        ),
+        ElevatedButton(
+          onPressed: () => _navigateToVideo(
+              'https://kaaba.co.id/syaamil-demo/encoded/masjidil-haram/master.m3u8'),
+          child: const Text('Masjidil Haram Video'),
+        ),
+        ElevatedButton(
+          onPressed: () => _navigateToVideo(
+              'https://kaaba.co.id/syaamil-demo/encoded/jamarat/master.m3u8'),
+          child: const Text('Jamarat Video'),
+        ),
+        ElevatedButton(
+          onPressed: () => _navigateToVideo(
+              'https://kaaba.co.id/syaamil-demo/encoded/mabit/master.m3u8'),
+          child: const Text('Mabit Video'),
+        ),
+        ElevatedButton(
+          onPressed: () => _navigateToVideo(
+              'https://kaaba.co.id/syaamil-demo/encoded/ihram/master.m3u8'),
+          child: const Text('Ihram Video'),
+        ),
+      ],
     );
   }
 
-  void buttonOnPressed() {
+  void _navigateToVideo(String link) {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const VideoPlayerPage(),
+        builder: (context) => VideoPlayerPage(link: link),
       ),
     );
   }
 }
 
 class VideoPlayerPage extends StatefulWidget {
-  const VideoPlayerPage({super.key});
+  const VideoPlayerPage({super.key, required this.link});
+
+  final String link;
 
   @override
   _VideoPlayerPageState createState() => _VideoPlayerPageState();
@@ -301,8 +349,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage>
       ..onPositionChange = onChangePosition
       ..onFinishedChange = onReceiveEnded;
     _viewPlayerController.loadVideo(
-      videoUrl:
-          'https://cdn.bitmovin.com/content/assets/playhouse-vr/m3u8s/105560.m3u8',
+      videoUrl: widget.link,
     );
   }
 
