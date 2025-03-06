@@ -30,11 +30,12 @@ Pod::Spec.new do |s|
   s.source = { :path => '.' }
 
   # ――― Source Files ――― #
-  s.source_files = 'Classes/**/*', 'Sources/**/*'
+  s.source_files = 'Sources/**/*'
 
   # ――― Project Settings ――― #
   s.swift_version = '5.0'
   s.dependency 'Flutter'
   s.dependency 'PlayKitProviders'
-
+  s.dependency 'PlayKit/Core'
+  
 end
