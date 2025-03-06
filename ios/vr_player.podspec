@@ -37,5 +37,5 @@ Pod::Spec.new do |s|
   s.dependency 'Flutter'
   s.dependency 'PlayKitProviders'
   s.dependency 'PlayKit/Core'
-  
+  s.dependency 'PlayKitVR'
 end

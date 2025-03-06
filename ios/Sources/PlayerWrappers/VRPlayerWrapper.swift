@@ -11,9 +11,8 @@
 import Foundation
 import AVFoundation
 import AVKit
-// import PlayKitVR
+import PlayKitVR
 import SceneKit
-import vr_player  // Add this import to access PKLog
 
 class VRPlayerWrapper: AVPlayerWrapper, VRPlayerEngine {
     /************************************************************/
