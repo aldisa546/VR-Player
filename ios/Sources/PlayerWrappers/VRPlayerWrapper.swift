@@ -11,7 +11,7 @@
 import Foundation
 import AVFoundation
 import AVKit
-import PlayKitVRCustomized
+import PlayKitVR
 import SceneKit
 
 class VRPlayerWrapper: AVPlayerWrapper, VRPlayerEngine {
