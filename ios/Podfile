@@ -4,7 +4,7 @@ target 'Runner' do
   use_frameworks!
 
   # Pods for YourAppTargetName
-  pod 'PlayKitVR', :git => 'https://github.com/aldisa546/playkit-ios-vr.git'
+  pod 'PlayKitVRCustomized', :git => 'https://github.com/aldisa546/playkit-ios-vr.git'
   pod 'PlayKitProviders'
 
 end

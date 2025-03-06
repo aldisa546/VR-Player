@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
   s.dependency 'Flutter'
   # s.dependency 'PlayKitVR', '~> 1.3.0'
-  s.dependency 'PlayKitVR'
+  s.dependency 'PlayKitVRCustomized'
   s.dependency 'PlayKitProviders'
 
 end
