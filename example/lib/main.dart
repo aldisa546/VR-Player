@@ -293,7 +293,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage>
   }
 
   Future<void> fullScreenPressed() async {
-    await _viewPlayerController.fullScreen();
+    // await _viewPlayerController.fullScreen();
     setState(() {
       _isFullScreen = !_isFullScreen;
     });
