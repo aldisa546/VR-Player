@@ -30,8 +30,7 @@ Pod::Spec.new do |s|
   s.source = { :path => '.' }
 
   # ――― Source Files ――― #
-  s.source_files = 'Classes/**/*'
-  s.source_files = 'Sources/**/*'
+  s.source_files = 'Classes/**/*', 'Sources/**/*'
 
   # ――― Project Settings ――― #
   s.swift_version = '5.0'
