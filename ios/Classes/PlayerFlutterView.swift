@@ -1,6 +1,5 @@
 import Flutter
-import PlayKit
-import PlayKitProviders
+import PlayKitCustomized
 
 final class PlayerFlutterViewFactory: NSObject, FlutterPlatformViewFactory {
     

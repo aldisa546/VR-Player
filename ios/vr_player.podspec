@@ -32,8 +32,17 @@ Pod::Spec.new do |s|
   # ――― Source Files ――― #
   s.source_files = 'Classes/**/*', 'PlayKitVR/**/*'
 
-  # ――― Project Settings ――― #
+  # ――― Project Settings ――― #s
   s.swift_version = '5.0'
   s.dependency 'Flutter'
-  s.dependency 'PlayKitProviders'
+  s.dependency 'PlayKitVRCustomized'
+
+  s.subspec 'PlayKitProvidersCustomized' do |ss|
+    ss.source_files = 'PlayKitProvidersCustomized/**/*'
+    ss.dependency 'KalturaNetKit', '~> 1.7.0'
+    ss.dependency 'PlayKitUtils', '~> 0.7'
+    ss.dependency 'SwiftyXMLParser', '5.6.0'
+    ss.dependency 'PlayKitCustomized'
+  end
+
 end
