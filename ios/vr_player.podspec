@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   s.source = { :path => '.' }
 
   # ――― Source Files ――― #
-  s.source_files = 'Classes/**/*', 'PlayKitVR/**/*'
+  s.source_files = 'Classes/**/*'
 
   # ――― Project Settings ――― #s
   s.swift_version = '5.0'
