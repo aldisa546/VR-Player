@@ -71,10 +71,11 @@ class _VideoPlayerState extends State<VrPlayer> with WidgetsBindingObserver {
 
   @override
   void dispose() {
-    if (Platform.isIOS) {
-      _playerObserver.cancelListeners();
-      _videoPlayerController.pause();
-    }
+    _playerObserver.cancelListeners();
+    _videoPlayerController
+      ..pause()
+      ..dispose();
+
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }

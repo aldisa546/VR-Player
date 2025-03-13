@@ -97,4 +97,8 @@ class VrPlayerController {
   Future<void> onOrientationChanged() {
     return _channel.invokeMethod('onOrientationChanged');
   }
+
+  Future<void> dispose() {
+    return _channel.invokeMethod('dispose');
+  }
 }
